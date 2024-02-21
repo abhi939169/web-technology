@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANVAS EXAMPLE</title>
+</head>
+<body>
+
+    <canvas id="indianFlagCanvas" width="600" height="400" style="border:1px solid #000;"></canvas>
+
+    <script>
+        var canvas = document.getElementById("indianFlagCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Drawing the Indian flag
+        // Saffron stripe
+        ctx.fillStyle = "#FF9933";
+        ctx.fillRect(0, 0, canvas.width, canvas.height / 3);
+
+        // White stripe
+        ctx.fillStyle = "#FFFFFF";
+        ctx.fillRect(0, canvas.height / 3, canvas.width, canvas.height / 3);
+
+        // Green stripe
+        ctx.fillStyle = "#138808";
+        ctx.fillRect(0, (canvas.height / 3) * 2, canvas.width, canvas.height / 3);
+
+        // Drawing the Ashoka Chakra
+        var centerX = canvas.width / 2;
+        var centerY = canvas.height / 2;
+        var radius = canvas.height / 6;
+
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+        ctx.fillStyle = "#000080";
+        ctx.fill();
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = "#FFFFFF";
+        ctx.stroke();
+
+        // Drawing 24 spokes of the Ashoka Chakra
+        for (var i = 0; i < 24; i++) {
+            var angle = (i * 15) * (Math.PI / 180);
+            var spokeLength = radius * 0.8;
+
+            var startX = centerX + Math.cos(angle) * radius;
+            var startY = centerY + Math.sin(angle) * radius;
+            var endX = centerX + Math.cos(angle) * spokeLength;
+            var endY = centerY + Math.sin(angle) * spokeLength;
+
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.lineTo(endX, endY);
+            ctx.lineWidth = 3;
+            ctx.stroke();
+        }
+    </script>
+
+
+</body>
+</html>

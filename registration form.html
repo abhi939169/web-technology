@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style>
+        #d1{
+            width: 900px;
+            height: 750px;
+            border: 2px solid black;
+        }
+        form{
+            margin: left: 50px;;
+        }
+        body{
+           
+           background-image: url("https://png.pngtree.com/background/20210716/original/pngtree-portfolio-memphis-playful-abstract-pink-picture-image_1347354.jpg");
+              background-repeat: repeat-x; 
+              background: size 500px;; 
+              background-color: bisque;
+          }
+  
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">event Registration</h1>
+    <form >
+        <label for="name">NAME</label>
+        <input type="text"><br>
+        <label for="cname">college name</label>
+        <input type="text"><br>
+        <label for="dob">dob</label>
+        <input type="date"><br>
+        <label for="gender">gender</label>
+        <input type="radio"name="gender">
+        <label >male</label>
+        <input type="radio"name="gender">
+        <label >female</label>
+        <input type="radio" name="gender">
+        <label >others</label><br>
+        <label >choose your dept</label>
+        <select name="dept" id="dept"></select>
+        <option >csee</option>
+        <option >EEE</option>
+        <option >mech</option>
+        <label >Event intersted</label><br>
+        <input type="checkbox">
+        <label >technical events</label>
+        <input type="checkbox"id="i2">
+        <input type="checkbox">
+        <label >debate <sub></sub><50></label><br>
+            attach paymentphoto: <br>
+            <input type="file">
+            <fieldset>
+                <legend>contact details</legend>
+                <label for="name">emailaddress</label>
+                <input type="email"><br>
+                <label for="phone">phone number</label>
+                <input type="tel"><br>
+                <label for="blood">blood group</label>
+                <select name="blood" id="blood"></select>
+                <option value=""><sup>o-</sup></option>
+                <option value=""><sup>A+</sup></option>
+            </fieldset>
+            <input type="submit">
+            <input type="reset">
+
+
+
+
+    </form>
+</body>
+</html>
