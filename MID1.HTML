@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time table</title>
+    <style>
+        table, th, td {
+          border: 1px solid rgb(224, 13, 34);
+          
+        }
+        #dcl{
+            cursor: pointer;
+        }
+        #message {
+      text-align: center;
+      font-size: 24px;
+      padding-top: 5%;
+     
+    }
+    #table{
+            display: block;
+        }
+    
+    #msg{
+            cursor: pointer;
+        }
+        th {
+          text-align: center;
+          
+        }
+        td{
+            text-align: center;
+        }
+        tr:nth-child(even) {
+          background-color: #d5b8cb;
+        }
+        tr:nth-child(odd) {
+          background-color: #f1f7d8;
+        }
+         th:nth-child(even) {
+          background-color: #85bced;
+        }
+        body{
+           
+           background-image: url("https://png.pngtree.com/background/20210716/original/pngtree-portfolio-memphis-playful-abstract-pink-picture-image_1347354.jpg");
+              background-repeat: no-repeat; 
+              background-size:cover; 
+              background-color: bisque;
+          }
+          td :nth-child(2):hover{
+            background-color: brown;
+            
+          }
+          td:hover {
+            background-color: #5521af; 
+          }
+
+
+        </style>
+    
+  
+        
+        
+</head>
+<body>
+ <div id="content">
+<p><b>Design a webpage that contains college time table</b></p>
+</div>
+<table style="width: 1000px;" style="height: 500px;"> 
+<colgroup>
+  <col span="8" style="background-color: #f19f42">
+</colgroup>
+
+<tr>
+<th>day/hour</th>
+<th>10:30AM TO 11:20AM</th>
+<th>11:20AM TO 12:10PM</th>
+<th>12:10AM TO 1:00PM</th>
+<th rowspan="6" style="text-align: center;" >lunch break</th>
+<th>2:15PM TO 3:05PM </th>
+<th>3:05 TO 3:55PM</th>
+<th>3:55 TO 4:45PM</th>
+</tr>
+<tr>
+    <td onclick="updatePeriod(this)">MON</td>
+    <td>IS</td>
+    <td>AWSN</td>
+    <td>WT</td>
+    <td>ML</td>
+    <td>PBEA</td>
+    <td>IOT</td>
+    </tr>
+    <tr>
+    <td>TEU</td>
+    <td>ML</td>
+    <td>IS</td>
+    <td>AWSN</td>
+    <td>WT</td>
+    <td>IOT</td>
+    <td>FOE</td>
+    </tr>
+    <tr>
+    <td>WED</td>
+    <td colspan="3"id="msg" onclick="alert(' not attend the lab otherwise reduces the day to day marks')" >WT LAB</td>
+    <td>IS</td>
+    <td>LIB</td>
+    <td>PDEA</td>
+    </tr>
+    <div id="table"> 
+    <tr>
+    <td>THU</td>
+    <td colspan="3" id="dcl" ondblclick="eraseItem(this)" >DAD LAB</td>
+    <td>IOT</td>
+    <td>PBEA</td>
+    <td>AWSN</td>
+    </tr>
+    </div>
+    <tr>
+      <td>FRI</td>
+      <td colspan="3"  onclick="updatePeriod(this)">ML LAB</td>
+      <td>WT</td>
+      <td>ML</td>
+      <td>FOE</td>
+      </tr>
+      <script>
+        function eraseItem(item)
+         {
+          item.parentNode.removeChild(item);
+        }
+        function handleResize()
+         {
+    document.getElementById('content').innerHTML = '';}
+    document.getElementById('message').style.display = 'block';
+    window.removeEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
+
+    
+    function updateDay(cell) {
+        const daysMap = {
+            'Mon': 'Monday',
+            'Tue': 'Tuesday',
+            'Wed': 'Wednesday',
+            'Thu': 'Thursday',
+            'Fri': 'Friday'
+        };
+
+        const currentContent = cell.innerHTML;
+        if (daysMap[currentContent]) {
+            cell.innerHTML = daysMap[currentContent];
+        }
+    }
+
+      </script>
+     
+  </table>  
+</body>
+</html>
