@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: rgb(151, 27, 48);
+            background-image: url('https://www.tasteofhome.com/wp-content/uploads/2019/05/FB_RistoranteDelLago_Interior_Hero.jpg?w=1200');
+            background-repeat: repeat-x;
+            background-size: 100px;
+        }
+        .nvg
+        {
+                padding-left: 100px;
+                font-siz: large;
+                font-weight: bold;
+                color: blue;
+        }
+        .vg{
+                padding-left: 110px;
+                font-size: large;
+                font-weight: bold;
+                color: blue;
+        }
+        h1{
+            white-space: nowrap;
+            animation:  scroll-left 10s linear infinite;
+            text-align: center;
+            color: crimson;
+            font-style: italic;
+            text-decoration: underline;
+        }
+        @keyframes scroll-left {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    </style>
+
+    <h1>Restautrant menu</h1><br>
+    <ol>
+        <h2>--NON-VEG ITEMS--</h2>
+        <div class="nvg">
+            <li onclick="alert('CHICKEN CURRY IS VERY SPECIAL')">CHICKEN CURRY</li> <br>
+            <li onclick="alert('MUTTON CURRY IS VERY SPECIAL')">MUTTON CURRY</li><br>
+            <li onclick="alert('THIS IS VERY SPECIAL')">CHICKEN BIRYANI</li><br>
+            <li onclick="alert('ITS IS VERY SPECIAL')">MUTTON BIRYANI</li><br>
+            <li onclick="alert('KABAB CURRY IS VERY SPECIAL')">KABAB CHICKEN BIRYANI</li><br>
+        </div>
+    </ol>
+    <br>
+    <br>
+    <ol>
+        <h2>--VEG ITEMS--</h2>
+        <div class="vg">
+            <li onclick="alert('PANEER CURRY IS VERY SPECIAL')">PANEER CURRY</li><br>
+            <li onclick="alert('MUSHROOM CURRY IS VERY SPECIAL')">MUSHROOM CURRY</li><br>
+            <li onclick="alert('EGG CURRY IS VERY SPECIAL')">EGG BIRYANI</li><br>
+            <li onclick="alert('VEG CURRY IS VERY SPECIAL')">VEG BIRYANI</li><br>
+            <li onclick="alert('FRIED RICE IS VERY SPECIAL')">FRIED RICE</li><br>
+        </div>
+    </ol>
+    
+
+</body>
+</html>
